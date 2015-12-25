@@ -1,4 +1,4 @@
-Tabu
+![tabu](http://github.com/posixpascal/tabu/blob/master/p.png)
 ===
 
 A noscript tab library written with only CSS.
