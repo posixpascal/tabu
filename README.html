@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+<h1 id="tabu">Tabu</h1>
+
+<p>A noscript tab library written with only CSS.
+On top of it, it offers a nice JavaScript API for non-noscript users.
+The JavaScript API isn&#8217;t finished yet.</p>
+
+<h3 id="maintainer">Maintainer</h3>
+
+<p><a href="https://github.com/posixpascal">Pascal Raszyk</a></p>
+
+<h3 id="getstarted">Get Started</h3>
+
+<p>Install dependencies</p>
+
+<p><code>sudo npm install &amp;&amp; bower install</code></p>
+
+<p>Build Project</p>
+
+<p><code>grunt</code></p>
+
+<p>Run Tests</p>
+
+<p>Open <code>SpecRunner.html</code> in your browser and test with jasmine</p>
+
+<h3 id="howtouse">How to use</h3>
+
+<pre><code class="html">    &lt;!-- It's important to add a .noscript class to your body in order to use this script --&gt;
+    &lt;body class=&quot;noscript&quot;&gt;
+    
+
+        &lt;div data-tabu=&quot;section_1&quot;&gt;
+            &lt;a href=&quot;#tab1&quot;&gt;
+                &lt;label for=&quot;tab1&quot;&gt;
+                    Tab 1
+                &lt;/label&gt;
+            &lt;a href=&quot;#tab2&quot;&gt;
+                &lt;label for=&quot;tab2&quot;&gt;
+                    Tab 2
+                &lt;/label&gt;
+            &lt;/a&gt;
+            &lt;a href=&quot;#tab3&quot;&gt;
+                &lt;label for=&quot;tab3&quot;&gt;
+                    Tab 3
+                &lt;/label&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div data-tabu-content=&quot;section_1&quot;&gt;
+            &lt;input type=&quot;radio&quot; checked name=&quot;section_1&quot; id=&quot;tab1&quot; data-tabu-tab=&quot;tab1&quot;&gt;
+            &lt;a name=&quot;tab1&quot;&gt;
+                This is the content for the first tab.
+                Also this tab is active by default.
+            &lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div data-tabu-content=&quot;section_1&quot;&gt;
+            &lt;input type=&quot;radio&quot; name=&quot;section_1&quot; id=&quot;tab2&quot; data-tabu-tab=&quot;tab2&quot;&gt;
+            &lt;a name=&quot;tab2&quot;&gt;
+                This is the content for the second tab.
+            &lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div data-tabu-content=&quot;section_1&quot;&gt;
+            &lt;input type=&quot;radio&quot; name=&quot;section_1&quot; id=&quot;tab3&quot; data-tabu-tab=&quot;tab3&quot;&gt;
+            &lt;a name=&quot;tab3&quot;&gt;
+                And this is the last tab.
+            &lt;/a&gt;
+        &lt;/div&gt;
+
+
+    &lt;/body&gt;
+</code></pre>
+
+<h3 id="howitworks">How it works</h3>
+
+<p>The tab navigation is build with labels which trigger radio inputs in the content area.
+I&#8217;m using the CSS sibling selector <code>+</code> to match the next <code>&lt;a&gt;</code> block and set it&#8217;s display attribute to block.
+The label tags are wrapped with an additional <code>&lt;a&gt;</code> tag to change the URL after selecting the tab.</p>
+
+<p>Unfortunately it&#8217;s not possible to select the current active link using CSS . :(. So it&#8217;s not possible for users to save the tab state in the URL.</p>
+
+<h3 id="license">License</h3>
+
+<p>The MIT License (MIT)</p>
+
+<p>Copyright (c) 2015 Pascal Raszyk</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the &#8220;Software&#8221;), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED &#8220;AS IS&#8221;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+
+</body>
+</html>

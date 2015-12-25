@@ -1,0 +1,43 @@
+// noscript part
+body.noscript {
+    [data-tabu] {
+    	border-bottom: 1px solid #ccc;
+        a {
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 5px;
+        }
+        label {
+            display: inline-block;
+            padding: 5px 20px;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            
+            border-radius: 3px 3px 0 0;
+            &:focus,
+            &:active {
+                background-color: #ccc;
+            }
+            position: relative;
+            [data-tabu-noscript] {
+                visibility: hidden;
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+            }
+        }
+    }
+    [data-tabu-content] a {
+        display: none;
+        padding: 10px;
+    }
+    [data-tabu-content] input[type="radio"] {
+        display: none;
+        &:checked + a {
+            display: block;
+            background: #f1f1f1;
+        }
+    }
+}

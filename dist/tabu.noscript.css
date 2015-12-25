@@ -1,0 +1,30 @@
+body.noscript [data-tabu] {
+  border-bottom: 1px solid #ccc; }
+  body.noscript [data-tabu] a {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 5px; }
+  body.noscript [data-tabu] label {
+    display: inline-block;
+    padding: 5px 20px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-radius: 3px 3px 0 0;
+    position: relative; }
+    body.noscript [data-tabu] label:focus, body.noscript [data-tabu] label:active {
+      background-color: #ccc; }
+    body.noscript [data-tabu] label [data-tabu-noscript] {
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0; }
+body.noscript [data-tabu-content] a {
+  display: none;
+  padding: 10px; }
+body.noscript [data-tabu-content] input[type="radio"] {
+  display: none; }
+  body.noscript [data-tabu-content] input[type="radio"]:checked + a {
+    display: block;
+    background: #f1f1f1; }
